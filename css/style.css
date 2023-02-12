@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+
+}
+
+:root{
+    --cor1:#180f4a;
+    --cor2:#ff2978;
+
+    --fonte1: 'Roboto';
+    --fonte2: 'Lobster';
+}
+
+body p{
+    line-height: 1.5em;
+}
+
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    /* 
+    FLEX-FLOW, define a direção ao qual meus itens irão demonstrar na tela, podendo aplicar o ROW (em linha) ou COLUMN (em colunas).
+
+    Dentro dele é possível já definir a quebra de linha ao diminuir a tela com a propriedade WRAP (quebra de linha).
+    Por padrão vem como NOWRAP (sem quebra de linha)
+    */
+    height: 100px;
+    background-color: white;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding: 0px 20px; */
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    flex: 20%;
+    /* 
+    FLEX, serve para controlar o tamanho e a posição dos elementos dentro de um container flexivel, para que seja responsivo.
+    */
+    /* border: 2px solid red; */
+    text-align: center;
+    margin-left: 10%;
+}
+
+.logo h1{
+    font-family: var(--fonte2);
+    color: var(--cor1);
+    font-size: 34px;
+    text-align: left;
+}
+
+.menu{
+    flex: 60%;
+    /* border: 2px solid black; */
+    text-align: right;
+}
+
+.menu a{
+    color: var(--cor1);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 16px;
+}
+
+.menu a:hover{
+    color:var(--cor2);
+    border-top: 4px solid var(--cor1);
+}
+
+#btn{
+    background-color: var(--cor1);
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10%;
+    margin-left: 5%;
+    border: none;
+}
+
+#btn:hover{
+    background-color: #ff2978;
+    transition: .3s;
+}
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    color: var(--cor1);
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.headline{
+    flex: 40%;
+    margin-left: 10%;
+    /* border: 2px solid red; */
+}
+
+.headline h2{
+    font-size: 20px;
+    letter-spacing: 15px;
+}
+
+#headline-h2{
+    font-size: 80px;
+    letter-spacing: 0px;
+}
+
+.headline p{
+    color: gray;
+    text-align: justify;
+    padding: 10px 0px;
+}
+
+.img-headline{
+    flex: 40%;
+    margin-right: 10%;
+    /* border: 2px solid yellow; */
+    text-align: center;
+}
+
+.contact-btn{
+    display: inline-block;
+    background-color: var(--cor2);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.contact-btn:hover{
+    background-color: var(--cor1);
+    transition: .3s;
+}
+
+.img-headline img{
+    max-width: 74%;
+    /* 
+    Essa propriedade feita acima, serve para que a imagem fique no maximo 100% do tamanho do seu Pai, IMG-HEADLINE, que caiba neste bloco.
+    */
+}
+
+section{
+    display: inline-block;
+    margin-top: 80px;
+    /* border: 2px solid red; */
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+section h2{
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    font-size: 50px;
+    font-family: var(--fonte2);
+    color: var(--cor1);
+}
+
+.servicos{
+    display: inline-block;
+}
+
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 30px;
+    margin: 0% 1%;
+    border: 1px solid var(--cor2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card h3, p{
+    padding-top: 30px;
+}
+
+.card p{
+    text-align: justify;
+}
+
+.texto-oculto{
+    display: none;
+}
+
+.card:hover{
+    background-color: var(--cor2);
+    color: white;
+    padding: 50px;
+}
+
+.card:hover img{
+    display: none;
+}
+
+.card:hover .card-text{
+    display: none;
+}
+
+.card:hover .texto-oculto{
+    display: block;
+}
+
+footer{
+    margin-top: 100px;
+    height: 300px;
+    background-image: linear-gradient(180deg, #180f4a, #0c0724, black );
+    color: white;
+    text-align: center;
+    border-top: 2.5px solid #ff2978;
+}
+
+footer h1{
+    font-family: var(--fonte2);
+    font-size: 34px;   
+    padding-top: 120px;
+}
+
+footer p{
+    display: inline-block;
+    margin: -30px;
+}
+
+#direitos{
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    margin: 0;
+}
