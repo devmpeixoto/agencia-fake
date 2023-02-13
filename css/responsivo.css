@@ -9,9 +9,10 @@
         display: none;
     }
 
-    .logo h1{
+    .logo, h1{
         margin: 0;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .header{
